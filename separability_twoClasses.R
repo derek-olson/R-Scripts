@@ -1,0 +1,8 @@
+install.packages("spatialEco")
+library(spatialEco)
+norm1 <- dnorm(seq(-20,20,length=5000),mean=0,sd=1)
+norm2 <- dnorm(seq(-20,20,length=5000),mean=0.2,sd=2)
+separability(norm1, norm2)
+s1 <- rnorm(n = 100, mean = 25, sd=10) #c (1362,1411,1457,1735,1621,1621,1791,1863,1863,1838)
+s2 <- rnorm(n = 100, mean = 50, sd=25) #c (1362,1411,1457,10030,1621,1621,1791,1863,1863,1838)
+separability(s1, s2, plot=TRUE)
